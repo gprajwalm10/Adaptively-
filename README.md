@@ -1,148 +1,40 @@
-# Adaptive Learning Platform
+# Adaptively — AI-Powered Adaptive Learning Platform
 
-An AI-driven adaptive learning system focused on accessibility and personalization.
+An accessible, AI-driven learning platform built for visually and hearing-impaired users. Adaptively combines voice navigation, sign-language recognition, and personalized AI content generation to remove barriers in digital education.
 
-## Technology Stack
+## What It Does
 
-### Frontend
-- React 18+ with TypeScript
-- Vite for build tooling
-- TailwindCSS for styling
-- Radix UI for accessible components
-- React Router for navigation
-- TanStack Query for data fetching
+- **Voice Navigation** — hands-free interaction using Google Cloud Speech-to-Text, enabling users to navigate the platform entirely by voice
+- **Sign Language Recognition** — real-time gesture detection using MediaPipe computer vision for hearing-impaired users
+- **AI Content Generation** — personalized learning content powered by Google Gemini API, adapting to each user's level and needs
+- **Multimodal Interaction** — supports voice, gesture, and text input simultaneously
 
-### Google Technologies
-- Google Cloud Speech-to-Text API for voice recognition
-- Google Cloud Text-to-Speech API for audio output
-- Google Cloud Translation API for multilingual support
-- Google Custom Search API for content discovery
-- Google OAuth 2.0 for authentication
+## Tech Stack
 
-### State Management & Data Flow
-- React Query for server state
-- React Hooks for local state
-- Custom hooks for feature-specific logic
+| Layer | Technology |
+|-------|-----------|
+| Frontend | React 18, TypeScript, Vite, TailwindCSS |
+| AI / ML | Google Gemini API, MediaPipe |
+| Speech | Google Cloud Speech-to-Text, Text-to-Speech |
+| Backend | Firebase (auth, database, storage) |
+| State | TanStack Query, React Hooks |
 
-### Accessibility Features
-- Voice Interaction (Speech Recognition)
-- Screen Reader Support
-- Keyboard Navigation
-- High Contrast Modes
-- Responsive Design
+## Getting Started
 
-## Project Structure
-
-```
-src/
-├── components/         # React components
-│   ├── ui/            # Reusable UI components
-│   ├── accessibility/ # Accessibility-specific components
-│   └── content/       # Content-related components
-├── hooks/             # Custom React hooks
-├── lib/               # Utility functions and helpers
-├── pages/             # Page components
-└── utils/             # Helper functions
-```
-
-## Key Components
-
-### Layout (`Layout.tsx`)
-Main layout component providing consistent structure across pages with:
-- Responsive header with navigation
-- Main content area
-- Footer with site information
-
-### Content Search (`SearchSection.tsx`, `useContentSearch.ts`)
-- Search functionality for educational content
-- Format preference selection
-- Difficulty level filtering
-
-### AI Generator (`AIGenerator.tsx`)
-- AI-powered content generation
-- Customizable output formats
-- Learning level adaptation
-
-### Voice Interaction (`VoiceInteraction.tsx`)
-- Speech recognition for hands-free interaction
-- Voice commands processing
-- Text-to-speech output
-
-### Chat Interface (`ChatInterface.tsx`)
-- Interactive chat UI
-- Message history management
-- Response formatting
-
-## Setup Instructions
-
-1. Clone the repository
 ```bash
-git clone [https://github.com/ravikirank2018/learn-gen-main]
-```
+# Clone the repo
+git clone https://github.com/gprajwalm10/Adaptively-.git
+cd Adaptively-
 
-2. Install dependencies
-```bash
+# Install dependencies
 npm install
-```
 
-3. Set up environment variables
-Create a `.env` file in the root directory:
-```env
-VITE_APP_API_KEY=your_api_key
-```
+# Set up environment variables
+cp .env.example .env
+# Add your API keys to .env
 
-4. Start development server
-```bash
+# Start the development server
 npm run dev
 ```
 
-## Development Guidelines
-
-### Component Creation
-- Use TypeScript for type safety
-- Implement proper accessibility attributes
-- Follow component composition patterns
-- Include proper documentation
-
-### Styling
-- Use TailwindCSS utility classes
-- Follow responsive design principles
-- Maintain consistent theming
-- Support dark mode
-
-### Accessibility
-- Implement ARIA labels
-- Ensure keyboard navigation
-- Support screen readers
-- Test with accessibility tools
-
-### State Management
-- Use React Query for API data
-- Implement proper error handling
-- Maintain loading states
-- Cache responses appropriately
-
-## Build & Deployment
-
-1. Build the application
-```bash
-npm run build
-```
-
-2. Preview production build
-```bash
-npm run preview
-```
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit changes
-4. Push to the branch
-5. Open a pull request
-
-
-## Support
-
-For support, please open an issue in the repository or contact the maintainers.
+## Project Structure
